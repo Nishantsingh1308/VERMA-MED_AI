@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- The title will be filled in by each individual page -->
+    <title>{% block title %}{% endblock %} - VERAMED</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-white shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <a href="/" class="text-2xl font-bold text-teal-600">VERAMED</a>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="/" class="text-gray-600 hover:bg-gray-100 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="/veramedquery" class="text-gray-600 hover:bg-gray-100 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">VERAMEDQuery</a>
+                    <a href="/veramedscan" class="text-gray-600 hover:bg-gray-100 hover:text-teal-600 px-3 py-2 rounded-md text-sm font-medium">VERAMEDScanAI</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+</body>
+</html>
+
